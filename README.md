@@ -1,4 +1,4 @@
-# Serverless Web Application with AWS Lambda, API Gateway, and DynamoDB 🚀
+# Serverless Web Application with AWS Lambda, API Gateway, and DynamoDB 🎬
 
 #### This project demonstrates the deployment of a serverless web application using AWS Lambda for backend logic, Amazon API Gateway for REST endpoints, and Amazon DynamoDB for data storage. Designed for scalability and cost-efficiency! 🛠️
 
