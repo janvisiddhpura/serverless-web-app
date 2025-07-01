@@ -49,7 +49,7 @@ def insert_record(formbody):
     formbody = urllib.parse.unquote_plus(formbody)
     formbody = formbody.replace("=", "' : '")
     formbody = formbody.replace("&", "', '")
-    formbody = "INSERT INTO \"berry-contacts\" VALUE {'" + formbody + "'}"
+    formbody = "INSERT INTO \"TABLE_NAME\" VALUE {'" + formbody + "'}"
 
     client = boto3.client('dynamodb')
     response = client.execute_statement(Statement=formbody)
