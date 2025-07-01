@@ -24,7 +24,7 @@
 
 #### 1️⃣ IAM Role Configuration
 
-- **Role Name:** admin-lambda-role
+- **Role Name:** role-name
 
 - **Attached Policies:**
 
@@ -52,11 +52,11 @@
 
 #### 2️⃣ Lambda Function
 
-- **Function Name:** berryStaticFunction
+- **Function Name:** functionName
 
-- **Region:** ap-south-1 (Deploy here only; do not use us-east-1)
+- **Region:** regin-name
 
-- **Execution Role:** Use existing role admin-lambda-role
+- **Execution Role:** Use existing role
 
 - **Runtime:** Choose your preferred runtime (Node.js, Python, etc.)
 
@@ -66,17 +66,17 @@
 
 2. Create a function
 
-3. Name: berryStaticFunction
+3. Name: functionName
 
-4. Select runtime & region: ap-south-1
+4. Select runtime & region: region-name (same for all configurations)
 
-5. Permissions: Use existing role admin-lambda-role
+5. Permissions: Use existing role
 
 6. Deploy & test code 🧪
 
 #### 3️⃣ DynamoDB
 
-- **Table Name:** berry-contacts
+- **Table Name:** table-name
 
 - **Primary Key:** Configure as per your needs
 
@@ -86,7 +86,7 @@
 
 2. Create a table
 
-3. Name: berry-contacts
+3. Name: table-name
 
 4. Define primary key (e.g., email as partition key)
 
@@ -94,7 +94,7 @@
 
 #### 4️⃣ API Gateway
 
-- **API Name::** berrycontactsapi
+- **API Name::** apiname
 
 - **Methods:**
 
@@ -118,7 +118,7 @@
 
   -  POST
 
-5. Integrate with Lambda function: berryStaticFunction
+5. Integrate with Lambda function: functionName
 
 6. Deploy to dev stage 🚀
 
@@ -131,7 +131,7 @@
 ### Example cURL for POST:
 
 ```sh
-curl -X POST https://{your-api-id}.execute-api.ap-south-1.amazonaws.com/dev/resource \
+curl -X POST https://{your-api-id}.execute-api.region-name.amazonaws.com/dev/resource \
   -H "Content-Type: application/json" \
   -d '{"key": "value"}'
 ```
